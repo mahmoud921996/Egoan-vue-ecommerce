@@ -38,14 +38,13 @@
 import { useRouter } from "vue-router";
 import { defineComponent, ref, computed } from "vue";
 import { useAuth } from "../store/Auth";
-import { Error } from "../types/index";
 export default defineComponent({
   setup() {
     const router = useRouter();
     const email = ref<string>("");
     const password = ref<string>("");
     const mode = ref("login");
-    const error = ref<Error | null>(null);
+    const error = ref<string | null>(null);
     const authStore = useAuth();
     const isLoading = ref<boolean>(false);
     const formIsValid = ref<boolean>(true);

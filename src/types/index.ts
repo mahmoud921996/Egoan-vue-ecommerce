@@ -60,8 +60,3 @@ export interface Auth{
 export interface Authentication extends Auth{
 mode:'signup'|'login'
 }
-
-
-export interface Error{
-  error:''
-}
